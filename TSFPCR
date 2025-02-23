@@ -8,7 +8,6 @@ end
 wait(0.01)
 invokeRollRemote()
 
-wait(0.2)
 game.StarterGui:SetCore("SendNotification", {
     Title = "Script Is Injected!";
     Text = "Thank you for using Craxy script! Current script executed: [The storage: Free 10 premium crates roll.]";
