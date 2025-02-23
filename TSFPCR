@@ -1,0 +1,38 @@
+local function invokeRollRemote()
+    local remoteFunctionArgs = {
+        [1] = "PremRollSkin10"
+    }
+    game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer(unpack(remoteFunctionArgs))
+end
+
+wait(0.01)
+invokeRollRemote()
+
+wait(0.2)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Script Is Injected!";
+    Text = "Thank you for using Craxy script! Current script executed: [The storage: Free 10 premium crates roll.]";
+    Duration = 5;
+})
+
+local sound = Instance.new("Sound")
+sound.SoundId = "rbxassetid://136442624750684"
+sound.Parent = game.Workspace
+
+sound:Play()
+
+sound.Ended:Connect(function()
+    sound:Destroy()
+end)
+
+wait(6)
+
+local sound = Instance.new("Sound")
+sound.SoundId = "rbxassetid://135869563808171"
+sound.Parent = game.Workspace
+
+sound:Play()
+
+sound.Ended:Connect(function()
+    sound:Destroy()
+end)
